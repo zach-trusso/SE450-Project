@@ -1,0 +1,9 @@
+TEST(GoFishGameTest, TestTransferCards) {
+    vector<Card> playerHand = {{"2", "H"}, {"3", "D"}, {"4", "S"}};
+    vector<Card> computerHand;
+    transferCards(playerHand, computerHand, "3");
+
+    ASSERT_EQ(playerHand.size(), 2); // should remove one card
+    ASSERT_EQ(computerHand.size(), 1); // should add one card
+    ASSERT_EQ(computerHand[0].rank, "3"); // should transfer the "3D" card
+}

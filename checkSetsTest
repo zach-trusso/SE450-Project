@@ -1,0 +1,8 @@
+TEST(GoFishGameTest, TestCheckSets) {
+    vector<Card> hand = {{"2", "H"}, {"2", "S"}, {"2", "D"}, {"2", "C"}};
+    map<string, int> sets;
+    int setsCollected = checkSets(hand, sets);
+
+    ASSERT_EQ(setsCollected, 1); // should collect one set
+    ASSERT_EQ(sets["2"], 1); // should increment the set count for "2"
+}

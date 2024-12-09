@@ -1,0 +1,5 @@
+TEST(GoFishGameTest, TestHasCard) {
+    vector<Card> hand = {{"2", "H"}, {"3", "D"}, {"4", "S"}};
+    ASSERT_TRUE(hasCard(hand, "3")); // should return true as 3D is in hand
+    ASSERT_FALSE(hasCard(hand, "A")); // should return false as A is not in hand
+}
